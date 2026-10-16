@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Contact | Jackson Hills Automotive</title>
+<meta name="description" content="Contact Jackson Hills Automotive to ask a question or book a visit.">
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600&family=Barlow:wght@400;500;600&family=Big+Shoulders+Display:wght@700;800;900&display=swap">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="index.html" aria-label="Jackson Hills Automotive home">
+      <svg viewBox="0 0 48 48" aria-hidden="true"><circle cx="24" cy="24" r="22.5" fill="none" stroke="#c9a35b" stroke-width="1.5"/><circle cx="24" cy="24" r="18.5" fill="none" stroke="#c9a35b" stroke-opacity=".45" stroke-width="1"/><rect x="5" y="30" width="38" height="2.4" fill="#c9a35b"/><rect x="7" y="34" width="34" height="2.4" fill="#8f7037"/><text x="24" y="27" text-anchor="middle" font-family="Big Shoulders Display, Arial Narrow, sans-serif" font-weight="800" font-size="16" fill="#ece6da" letter-spacing="1">JH</text></svg>
+      <span class="brand-name"><strong>Jackson Hills</strong><span>Automotive</span></span>
+    </a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button>
+    <nav class="site-nav" id="site-nav" aria-label="Main">
+      <ul><li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li><li><a href="gallery.html">Gallery</a></li><li><a class="nav-cta" href="contact.html" aria-current="page">Contact</a></li></ul>
+    </nav>
+  </div>
+</header>
+<main>
+<section class="page-head">
+  <div class="wrap">
+    <span class="eyebrow">Contact</span>
+    <h1>Let's talk cars</h1>
+    <p class="lead">Questions, quotes or booking a visit. Send a note and we'll get back to you.</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap contact-grid">
+    <form class="form" id="contact-form" novalidate>
+      <div class="form-row">
+        <div class="field"><label for="name">Name</label><input id="name" name="name" type="text" autocomplete="name" required></div>
+        <div class="field"><label for="email">Email</label><input id="email" name="email" type="email" autocomplete="email" required></div>
+      </div>
+      <div class="form-row">
+        <div class="field"><label for="phone">Phone</label><input id="phone" name="phone" type="tel" autocomplete="tel"></div>
+        <div class="field"><label for="vehicle">Vehicle</label><input id="vehicle" name="vehicle" type="text" placeholder="Year, make, model"></div>
+      </div>
+      <div class="field">
+        <label for="service">What do you need?</label>
+        <select id="service" name="service">
+          <option>Maintenance or repair</option>
+          <option>Diagnostics</option>
+          <option>Performance work</option>
+          <option>Classic or restoration</option>
+          <option>Something else</option>
+        </select>
+      </div>
+      <div class="field"><label for="message">Message</label><textarea id="message" name="message" required placeholder="Tell us what's going on with your car"></textarea></div>
+      <div class="btn-row"><button class="btn btn-primary" type="submit">Send message</button></div>
+      <p class="form-status" id="form-status" role="status" hidden></p>
+    </form>
+
+    <aside class="info-card" aria-label="Contact details">
+      <dl>
+        <div><dt>Address</dt><dd>[Street address]<br>[City, State ZIP]</dd></div>
+        <div><dt>Phone</dt><dd>[(555) 555-0100]</dd></div>
+        <div><dt>Email</dt><dd>[hello@yourdomain.com]</dd></div>
+      </dl>
+      <div>
+        <h3 style="font-size:1rem;font-family:var(--font-label);letter-spacing:.18em;color:var(--brass);font-weight:600;margin-bottom:.5rem">Hours</h3>
+        <table class="hours">
+          <tr><td>Monday to Friday</td><td>8:00 – 6:00</td></tr>
+          <tr><td>Saturday</td><td>9:00 – 2:00</td></tr>
+          <tr><td>Sunday</td><td>Closed</td></tr>
+        </table>
+        <p class="form-note" style="margin-top:.75rem">Placeholder hours. Update to match the shop.</p>
+      </div>
+    </aside>
+  </div>
+</section>
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <div>
+      <a class="brand" href="index.html"><svg viewBox="0 0 48 48" aria-hidden="true"><circle cx="24" cy="24" r="22.5" fill="none" stroke="#c9a35b" stroke-width="1.5"/><circle cx="24" cy="24" r="18.5" fill="none" stroke="#c9a35b" stroke-opacity=".45" stroke-width="1"/><rect x="5" y="30" width="38" height="2.4" fill="#c9a35b"/><rect x="7" y="34" width="34" height="2.4" fill="#8f7037"/><text x="24" y="27" text-anchor="middle" font-family="Big Shoulders Display, Arial Narrow, sans-serif" font-weight="800" font-size="16" fill="#ece6da" letter-spacing="1">JH</text></svg><span class="brand-name"><strong>Jackson Hills</strong><span>Automotive</span></span></a>
+      <p style="margin-top:1rem">Modern service with old-school standards. [Add a one-line tagline here.]</p>
+    </div>
+    <div>
+      <h3>Visit</h3>
+      <p>[Street address]<br>[City, State ZIP]<br>[(555) 555-0100]</p>
+    </div>
+    <div>
+      <h3>Explore</h3>
+      <ul><li><a href="index.html">Home</a></li><li><a href="about.html">About us</a></li><li><a href="gallery.html">Gallery</a></li><li><a href="contact.html">Contact</a></li></ul>
+    </div>
+  </div>
+  <div class="footer-base"><div class="wrap"><span>&copy; <span data-year>2026</span> Jackson Hills Automotive</span><span>Built for the long haul.</span></div></div>
+</footer>
+<script src="js/main.js"></script>
+</body>
+</html>

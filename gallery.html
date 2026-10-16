@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Gallery | Jackson Hills Automotive</title>
+<meta name="description" content="Builds, repairs and restorations from Jackson Hills Automotive.">
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600&family=Barlow:wght@400;500;600&family=Big+Shoulders+Display:wght@700;800;900&display=swap">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="index.html" aria-label="Jackson Hills Automotive home">
+      <svg viewBox="0 0 48 48" aria-hidden="true"><circle cx="24" cy="24" r="22.5" fill="none" stroke="#c9a35b" stroke-width="1.5"/><circle cx="24" cy="24" r="18.5" fill="none" stroke="#c9a35b" stroke-opacity=".45" stroke-width="1"/><rect x="5" y="30" width="38" height="2.4" fill="#c9a35b"/><rect x="7" y="34" width="34" height="2.4" fill="#8f7037"/><text x="24" y="27" text-anchor="middle" font-family="Big Shoulders Display, Arial Narrow, sans-serif" font-weight="800" font-size="16" fill="#ece6da" letter-spacing="1">JH</text></svg>
+      <span class="brand-name"><strong>Jackson Hills</strong><span>Automotive</span></span>
+    </a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button>
+    <nav class="site-nav" id="site-nav" aria-label="Main">
+      <ul><li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li><li><a href="gallery.html" aria-current="page">Gallery</a></li><li><a class="nav-cta" href="contact.html">Contact</a></li></ul>
+    </nav>
+  </div>
+</header>
+<main>
+<section class="page-head">
+  <div class="wrap">
+    <span class="eyebrow">Gallery</span>
+    <h1>From the shop floor</h1>
+    <p class="lead">Builds, repairs, restorations and the people who bring them in. Tap any photo for a closer look.</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <div class="filters" role="group" aria-label="Filter photos"><button class="chip" type="button" data-filter="all" aria-pressed="true">All</button><button class="chip" type="button" data-filter="shop" aria-pressed="false">Shop</button><button class="chip" type="button" data-filter="builds" aria-pressed="false">Builds</button><button class="chip" type="button" data-filter="classics" aria-pressed="false">Classics</button><button class="chip" type="button" data-filter="events" aria-pressed="false">Events</button></div>
+    <div class="gallery">
+      <figure data-cat="shop"><button type="button" aria-label="View larger: The shop floor"><img src="images/gallery-01.svg" alt="Placeholder: The shop floor" width="1200" height="900" loading="lazy"></button><figcaption><strong>The shop floor</strong><span>Shop</span></figcaption></figure>
+      <figure data-cat="builds"><button type="button" aria-label="View larger: Project build"><img src="images/gallery-02.svg" alt="Placeholder: Project build" width="1200" height="900" loading="lazy"></button><figcaption><strong>Project build</strong><span>Builds</span></figcaption></figure>
+      <figure data-cat="events"><button type="button" aria-label="View larger: Cars and coffee"><img src="images/gallery-03.svg" alt="Placeholder: Cars and coffee" width="1200" height="900" loading="lazy"></button><figcaption><strong>Cars and coffee</strong><span>Events</span></figcaption></figure>
+      <figure data-cat="builds"><button type="button" aria-label="View larger: Engine bay detail"><img src="images/gallery-04.svg" alt="Placeholder: Engine bay detail" width="1200" height="900" loading="lazy"></button><figcaption><strong>Engine bay detail</strong><span>Builds</span></figcaption></figure>
+      <figure data-cat="shop"><button type="button" aria-label="View larger: Tools of the trade"><img src="images/gallery-05.svg" alt="Placeholder: Tools of the trade" width="1200" height="900" loading="lazy"></button><figcaption><strong>Tools of the trade</strong><span>Shop</span></figcaption></figure>
+      <figure data-cat="classics"><button type="button" aria-label="View larger: Classic restoration"><img src="images/gallery-06.svg" alt="Placeholder: Classic restoration" width="1200" height="900" loading="lazy"></button><figcaption><strong>Classic restoration</strong><span>Classics</span></figcaption></figure>
+      <figure data-cat="events"><button type="button" aria-label="View larger: Track day"><img src="images/gallery-07.svg" alt="Placeholder: Track day" width="1200" height="900" loading="lazy"></button><figcaption><strong>Track day</strong><span>Events</span></figcaption></figure>
+      <figure data-cat="classics"><button type="button" aria-label="View larger: Before and after"><img src="images/gallery-08.svg" alt="Placeholder: Before and after" width="1200" height="900" loading="lazy"></button><figcaption><strong>Before and after</strong><span>Classics</span></figcaption></figure>
+      <figure data-cat="builds"><button type="button" aria-label="View larger: Finished build"><img src="images/gallery-09.svg" alt="Placeholder: Finished build" width="1200" height="900" loading="lazy"></button><figcaption><strong>Finished build</strong><span>Builds</span></figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<div class="lightbox" id="lightbox" hidden role="dialog" aria-modal="true" aria-label="Photo viewer">
+  <button class="lightbox-close" type="button">Close</button>
+  <figure><img src="" alt=""><figcaption></figcaption></figure>
+</div>
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <div>
+      <a class="brand" href="index.html"><svg viewBox="0 0 48 48" aria-hidden="true"><circle cx="24" cy="24" r="22.5" fill="none" stroke="#c9a35b" stroke-width="1.5"/><circle cx="24" cy="24" r="18.5" fill="none" stroke="#c9a35b" stroke-opacity=".45" stroke-width="1"/><rect x="5" y="30" width="38" height="2.4" fill="#c9a35b"/><rect x="7" y="34" width="34" height="2.4" fill="#8f7037"/><text x="24" y="27" text-anchor="middle" font-family="Big Shoulders Display, Arial Narrow, sans-serif" font-weight="800" font-size="16" fill="#ece6da" letter-spacing="1">JH</text></svg><span class="brand-name"><strong>Jackson Hills</strong><span>Automotive</span></span></a>
+      <p style="margin-top:1rem">Modern service with old-school standards. [Add a one-line tagline here.]</p>
+    </div>
+    <div>
+      <h3>Visit</h3>
+      <p>[Street address]<br>[City, State ZIP]<br>[(555) 555-0100]</p>
+    </div>
+    <div>
+      <h3>Explore</h3>
+      <ul><li><a href="index.html">Home</a></li><li><a href="about.html">About us</a></li><li><a href="gallery.html">Gallery</a></li><li><a href="contact.html">Contact</a></li></ul>
+    </div>
+  </div>
+  <div class="footer-base"><div class="wrap"><span>&copy; <span data-year>2026</span> Jackson Hills Automotive</span><span>Built for the long haul.</span></div></div>
+</footer>
+<script src="js/main.js"></script>
+</body>
+</html>
