@@ -10,6 +10,7 @@
   --muted: #a29d92;      /* secondary text */
   --brass: #c9a35b;      /* heritage accent */
   --brass-deep: #8f7037; /* accent shade */
+  --redline: #d0462f;    /* tachometer redline */
 
   --font-display: "Big Shoulders Display", "Arial Narrow", Impact, sans-serif;
   --font-body: "Barlow", "Helvetica Neue", Arial, sans-serif;
@@ -267,8 +268,39 @@ p { margin: 0; max-width: 65ch; }
   border-radius: 3px;
   box-shadow: 0 0 0 3px var(--ink), 0 0 0 4px var(--brass);
 }
+/* Tachometer */
+.tach {
+  position: absolute;
+  right: -28px;
+  bottom: -40px;
+  width: clamp(150px, 19vw, 230px);
+  aspect-ratio: 1;
+  max-width: 100%;
+  filter: drop-shadow(0 12px 28px rgba(0, 0, 0, 0.6));
+}
+.tach svg { width: 100%; height: 100%; display: block; overflow: visible; }
+.tach-bezel { fill: var(--panel-2); stroke: var(--brass); stroke-width: 2.5; }
+.tach-face { fill: var(--ink); stroke: var(--line); stroke-width: 1; }
+.tach-red { fill: none; stroke: var(--redline); stroke-width: 7; opacity: 0.85; }
+.tach-tick { stroke: var(--muted); stroke-width: 1; }
+.tach-tick.major { stroke: var(--fg); stroke-width: 2.2; }
+.tach-tick.hot { stroke: var(--fg); }
+.tach-num { fill: var(--fg); font-family: var(--font-display); font-weight: 800; font-size: 15px; text-anchor: middle; }
+.tach-num.hot { fill: var(--redline); }
+.tach-label { fill: var(--muted); font-family: var(--font-label); font-size: 7px; letter-spacing: 1.5px; text-anchor: middle; }
+.tach-readout { fill: var(--brass); font-family: var(--font-display); font-weight: 800; font-size: 17px; letter-spacing: 1px; text-anchor: middle; font-variant-numeric: tabular-nums; }
+.tach-readout.hot { fill: var(--redline); }
+.tach-needle { transform-origin: 100px 100px; transform: rotate(-135deg); }
+.tach-needle path { fill: var(--redline); }
+.tach-needle .tach-tail { fill: var(--fg); }
+.tach-hub { fill: var(--panel-2); stroke: var(--brass); stroke-width: 1.5; }
+.tach-hub-dot { fill: var(--brass); }
+.tach-shift { fill: var(--line); transition: fill 0.08s; }
+.tach-shift.on { fill: var(--redline); filter: drop-shadow(0 0 4px var(--redline)); }
+
 @media (max-width: 820px) {
   .hero .wrap { grid-template-columns: 1fr; }
+  .tach { right: 8px; bottom: -36px; width: clamp(130px, 36vw, 190px); }
   .plate { left: 10px; bottom: -12px; }
 }
 

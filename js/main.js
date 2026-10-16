@@ -71,3 +71,40 @@
     });
   }
 })();
+
+// Home page tachometer: revs to redline and bounces off the limiter on load.
+(function () {
+  var tach = document.getElementById("tach");
+  if (!tach) return;
+  var needle = document.getElementById("tach-needle");
+  var readout = document.getElementById("tach-readout");
+  var shift = document.getElementById("tach-shift");
+  var MAX = 8000, REDLINE = 7000;
+
+  function set(rpm) {
+    needle.style.transform = "rotate(" + (-135 + 270 * rpm / MAX) + "deg)";
+    var hot = rpm >= REDLINE;
+    readout.textContent = hot ? "REDLINE" : String(Math.round(rpm / 50) * 50);
+    readout.classList.toggle("hot", hot);
+    shift.classList.toggle("on", rpm >= 6500);
+  }
+
+  if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) { set(7900); return; }
+
+  // Keyframes: [time ms, rpm]. Idle, a quick blip, then a full pull to the limiter.
+  var keys = [[0, 0], [450, 1100], [800, 900], [1150, 2600], [1450, 1800], [2900, 7950],
+              [3020, 7600], [3140, 7950], [3260, 7650], [3380, 7950], [3500, 7700], [3700, 7900]];
+  var ease = function (t) { return t < 0.5 ? 2 * t * t : 1 - Math.pow(-2 * t + 2, 2) / 2; };
+  var start = null;
+  function frame(now) {
+    if (start === null) start = now;
+    var t = now - start, i = 1;
+    while (i < keys.length && keys[i][0] < t) i++;
+    if (i >= keys.length) { set(keys[keys.length - 1][1]); return; }
+    var a = keys[i - 1], b = keys[i];
+    set(a[1] + (b[1] - a[1]) * ease((t - a[0]) / (b[0] - a[0])));
+    requestAnimationFrame(frame);
+  }
+  set(0);
+  setTimeout(function () { requestAnimationFrame(frame); }, 400);
+})();
