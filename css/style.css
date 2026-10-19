@@ -535,3 +535,36 @@ p { margin: 0; max-width: 65ch; }
 .footer-base { border-top: 1px solid var(--line); }
 .footer-base .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 0.5rem; padding-block: 1.25rem; font-size: 0.85rem; color: var(--muted); grid-template-columns: none; }
 @media (max-width: 700px) { .site-footer .wrap { grid-template-columns: 1fr; } }
+
+/* For sale */
+.notice { font-size: 0.95rem; color: var(--muted); border-left: 3px solid var(--brass); padding: 0.4rem 0 0.4rem 0.9rem; margin-bottom: 1.5rem; }
+.listings { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 320px), 1fr)); gap: 1.5rem; }
+.listing { background: var(--panel); border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden; display: flex; flex-direction: column; min-width: 0; }
+.listing[hidden] { display: none; }
+.listing-media { position: relative; }
+.listing-media img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; }
+.badge {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  font-family: var(--font-label);
+  font-weight: 600;
+  font-size: 0.78rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  padding: 0.3rem 0.65rem;
+  border-radius: 3px;
+}
+.badge-available { background: var(--brass); color: var(--ink); }
+.badge-pending { background: var(--fg); color: var(--ink); }
+.badge-sold { background: var(--redline); color: var(--fg); }
+.listing:has(.badge-sold) .listing-media img { filter: grayscale(0.8) brightness(0.7); }
+.listing-body { padding: 1.4rem 1.4rem 1.6rem; display: grid; gap: 0.7rem; align-content: start; flex: 1; }
+.listing-body .btn { justify-self: start; margin-top: 0.4rem; }
+.listing-cat { font-family: var(--font-label); letter-spacing: 0.16em; text-transform: uppercase; font-size: 0.8rem; color: var(--brass); }
+.listing h3 { font-size: 1.5rem; }
+.price { font-family: var(--font-display); font-weight: 800; font-size: 1.9rem; line-height: 1; color: var(--fg); font-variant-numeric: tabular-nums; }
+.specs { margin: 0; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); border-block: 1px solid var(--line); padding-block: 0.8rem; gap: 0.5rem; }
+.specs dt { font-family: var(--font-label); letter-spacing: 0.12em; text-transform: uppercase; font-size: 0.72rem; color: var(--muted); }
+.specs dd { margin: 0.15rem 0 0; font-size: 0.92rem; font-variant-numeric: tabular-nums; }
+.listing-blurb { color: var(--muted); font-size: 0.97rem; }

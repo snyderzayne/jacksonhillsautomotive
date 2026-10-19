@@ -18,7 +18,7 @@
 
   // Gallery filters
   var chips = document.querySelectorAll(".chip[data-filter]");
-  var items = document.querySelectorAll(".gallery figure");
+  var items = document.querySelectorAll(".gallery figure, .listing");
   chips.forEach(function (chip) {
     chip.addEventListener("click", function () {
       var f = chip.getAttribute("data-filter");
@@ -60,6 +60,14 @@
   // Contact form. Until a form service is connected (see README), show a friendly notice.
   var form = document.getElementById("contact-form");
   if (form) {
+    // Prefill the vehicle from a For Sale "Ask about this car" link.
+    var wanted = new URLSearchParams(window.location.search).get("vehicle");
+    if (wanted && form.elements.vehicle) {
+      form.elements.vehicle.value = wanted;
+      if (form.elements.message && !form.elements.message.value) {
+        form.elements.message.value = "Hi, I'm interested in the " + wanted + ". Is it still available?";
+      }
+    }
     form.addEventListener("submit", function (e) {
       if (form.getAttribute("action")) return; // a real endpoint is configured
       e.preventDefault();
